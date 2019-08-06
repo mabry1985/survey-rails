@@ -3,12 +3,12 @@
 <% if @surveys.any? %>
   <ul>
     <% @surveys.each do |survey| %>
-      <%= link_to survey.name, survey_path(survey) %></li>
+       <% survey.question_counter %>
+    <li> <%= link_to survey.name, survey_path(survey) %> <%= survey.question_count %> </li>
     <% end %>
   </ul>
 <% else %>
   <p>There are no surveys yet.</p>
 <% end %>
-
 
 <p><%= link_to "Create new survey", new_survey_path %></p>

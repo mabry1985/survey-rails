@@ -5,7 +5,6 @@ class CreateSurveys < ActiveRecord::Migration[5.2]
       t.column(:summary, :text)
       t.column(:date, :date)
       t.column(:question_count, :integer)
-
       t.timestamps()
     end
   end
